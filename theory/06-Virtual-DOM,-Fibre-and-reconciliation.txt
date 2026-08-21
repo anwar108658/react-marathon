@@ -1,0 +1,3 @@
+what is Reconciliation?
+
+the algorithm React uses to diff one tree to another  to determine which parts need to be changed
