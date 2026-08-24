@@ -1,5 +1,6 @@
 import BgChanger from "./bg-changer/BgChanger"
 import Counter from "./counterApp_0/Counter"
+import Currency from "./currencyExchange_5/Currency"
 import GeneratePassword from "./password-generater/GeneratePassword"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Counter/>
       <BgChanger/>
       <GeneratePassword/>
+      <Currency/>
     </div>
   )
 }
