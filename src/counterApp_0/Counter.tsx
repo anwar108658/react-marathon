@@ -25,7 +25,7 @@ const Counter = () => {
     }
   }
   return (
-    <div className="w-full h-screen bg-black text-white flex justify-center">
+    <div className="w-full h-screen bg-gray-950 text-white flex justify-center">
       <div className="flex flex-col items-center gap-3">
         <h1 className="text-3xl">Basic  Counter App</h1>
         <p className="text-cyan-500 text-lg">Counter value: {counter2}</p>
