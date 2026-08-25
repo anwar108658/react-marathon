@@ -1,17 +1,15 @@
-import BgChanger from "./bg-changer/BgChanger"
-import Counter from "./counterApp_0/Counter"
-import Currency from "./currencyExchange_5/Currency"
-import GeneratePassword from "./password-generater/GeneratePassword"
+import { Outlet } from "react-router-dom"
+import Footer from "./react-router_7/Footer/Footer"
+import Header from "./react-router_7/Header/Header"
 
 function App() {
   
 
   return (
-    <div className="bg-black text-white">
-      <Counter/>
-      <BgChanger/>
-      <GeneratePassword/>
-      <Currency/>
+    <div className=" ">
+      <Header/>
+        <Outlet/>
+      <Footer/>
     </div>
   )
 }

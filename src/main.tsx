@@ -2,6 +2,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import BgChanger from './bg-changer/BgChanger.tsx'
+import Counter from './counterApp_0/Counter.tsx'
+import GeneratePassword from './password-generater/GeneratePassword.tsx'
+import Currency from './currencyExchange_5/Currency.tsx'
+import Home from './react-router_7/Home/Home.tsx'
+import About from './react-router_7/About/About.tsx'
+import Contact from './react-router_7/Contact/Contact.tsx'
+import User from './react-router_7/User/User.tsx'
 
 
 const reactElement  = {
@@ -25,8 +34,48 @@ const reactActualElement = React.createElement(
 
 console.log(reactActualElement)
 
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <App/>,
+    children:[
+      {
+      path:'/',
+      element:<Home/>
+      },
+      {
+      path:'about',
+      element:<About/>
+      },
+      {
+      path:'contact',
+      element:<Contact/>
+      },
+      {
+      path:'user/:id',
+      element:<User/>
+      },
+      {
+      path:'bg-changer',
+      element:<BgChanger/>
+      },
+      {
+      path:'counter-app',
+      element:<Counter/>
+      },
+      {
+      path:'Generate-pass',
+      element:<GeneratePassword/>
+      },
+      {
+      path:'currency',
+      element:<Currency/>
+      },
+  ]
+  }
+])
+
 createRoot(document.getElementById('root')!).render(
-  <App />
-  // createAnother()
-  // reactActualElement
+  <RouterProvider router={router} />
 )
