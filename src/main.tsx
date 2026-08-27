@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import BgChanger from './bg-changer/BgChanger.tsx'
 import Counter from './counterApp_0/Counter.tsx'
@@ -11,6 +11,7 @@ import Home from './react-router_7/Home/Home.tsx'
 import About from './react-router_7/About/About.tsx'
 import Contact from './react-router_7/Contact/Contact.tsx'
 import User from './react-router_7/User/User.tsx'
+import { ThemeProvider } from './Context/theme.ts'
 
 
 const reactElement  = {
@@ -76,6 +77,31 @@ const router = createBrowserRouter([
   }
 ])
 
+
+
+function Main() {
+  const [themeMode,setThemeMode] = useState("light")
+  
+  const darkTheme = () => {
+    setThemeMode("dark")
+  }
+  const lightTheme = () => {
+    setThemeMode("light")
+  }
+  
+  useEffect(() => {
+    document.querySelector("html")?.classList.remove("light", "dark");
+    document.querySelector('html')?.classList?.add(themeMode)
+  }, [themeMode])
+
+  return(
+    <ThemeProvider value={{themeMode,darkTheme,lightTheme}}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
+  
+}
+
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />
+  <Main />
 )

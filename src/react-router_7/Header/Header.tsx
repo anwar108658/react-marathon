@@ -3,16 +3,16 @@ import {Link,NavLink} from 'react-router-dom'
 export default function Header() {
     const navItem = [
         {id:1, navName:"Home", navLink:"/"},
-        {id:1, navName:"About", navLink:"/about"},
-        {id:1, navName:"Contact", navLink:"/contact"},
-        {id:2, navName:"Bg-Changer", navLink:"/bg-changer"},
-        {id:2, navName:"Counter-App", navLink:"/counter-app"},
-        {id:2, navName:"Generate-pass", navLink:"/Generate-pass"},
-        {id:2, navName:"Currency", navLink:"/currency"},
+        {id:2, navName:"About", navLink:"/about"},
+        {id:3, navName:"Contact", navLink:"/contact"},
+        {id:4, navName:"Bg-Changer", navLink:"/bg-changer"},
+        {id:5, navName:"Counter-App", navLink:"/counter-app"},
+        {id:6, navName:"Generate-pass", navLink:"/Generate-pass"},
+        {id:7, navName:"Currency", navLink:"/currency"},
     ]
     return (
         <header className="shadow sticky z-50 top-0">
-            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+            <nav className=" bg-white dark:bg-black border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
                     <Link to="/" className="flex items-center">
                         <img

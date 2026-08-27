@@ -46,9 +46,12 @@ const GeneratePassword = () => {
           <button onClick={copyPassword} title="Copy Password" className="bg-blue-700 px-2 rounded-tr-md rounded-br-md cursor-pointer hover:bg-blue-500 transition duration-150 ease-in-out "> 🗃️</button>
         </div>
         <div className="grid grid-cols-3">
-          <div className="col-span-1">
+          <div className="col-span-1"
+          >
             <label htmlFor="range" className="text-sm text-teal-500">Length : {length}</label>
-            <input className="cursor-col-resize" type="range" id="range" min={4} max={100} value={length} onChange={(e) => setLength(parseInt(e.target.value))}/>
+            <input style={{
+    cursor: `url("https://freesvg.org/img/taj-mahal-isolated.png") 4 4 , pointer`
+  }} className="" type="range" id="range" min={4} max={100} value={length} onChange={(e) => setLength(parseInt(e.target.value))}/>
           </div>
           <div className="col-span-1 flex items-center">
             <label htmlFor="num" className="text-sm text-teal-500 cursor-pointer">Numbers : </label>
