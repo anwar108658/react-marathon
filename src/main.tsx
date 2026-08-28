@@ -12,6 +12,7 @@ import About from './react-router_7/About/About.tsx'
 import Contact from './react-router_7/Contact/Contact.tsx'
 import User from './react-router_7/User/User.tsx'
 import { ThemeProvider } from './Context/theme.ts'
+import Todo from './TodoApp/Todo.tsx'
 
 
 const reactElement  = {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
       path:'currency',
       element:<Currency/>
+      },
+      {
+      path:'todo',
+      element:<Todo/>
       },
   ]
   }

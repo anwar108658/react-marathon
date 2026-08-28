@@ -50,8 +50,8 @@ const GeneratePassword = () => {
           >
             <label htmlFor="range" className="text-sm text-teal-500">Length : {length}</label>
             <input style={{
-    cursor: `url("https://freesvg.org/img/taj-mahal-isolated.png") 4 4 , pointer`
-  }} className="" type="range" id="range" min={4} max={100} value={length} onChange={(e) => setLength(parseInt(e.target.value))}/>
+              cursor: `url("https://freesvg.org/img/taj-mahal-isolated.png") 4 4 , pointer`
+            }} className="" type="range" id="range" min={4} max={100} value={length} onChange={(e) => setLength(parseInt(e.target.value))}/>
           </div>
           <div className="col-span-1 flex items-center">
             <label htmlFor="num" className="text-sm text-teal-500 cursor-pointer">Numbers : </label>

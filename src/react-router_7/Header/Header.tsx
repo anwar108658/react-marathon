@@ -9,6 +9,7 @@ export default function Header() {
         {id:5, navName:"Counter-App", navLink:"/counter-app"},
         {id:6, navName:"Generate-pass", navLink:"/Generate-pass"},
         {id:7, navName:"Currency", navLink:"/currency"},
+        {id:7, navName:"Todo", navLink:"/todo"},
     ]
     return (
         <header className="shadow sticky z-50 top-0">
